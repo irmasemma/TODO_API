@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VTS_TODO_API</name>
+    </assembly>
+    <members>
+        <member name="M:VTS_TODO_API.Controllers.TODOListItemController.Get(System.String)">
+            <summary>
+            Get all list items for selected list(Case sensitive)
+            </summary>
+            <param name="ListTitle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListItemController.Post(System.String,System.String)">
+            <summary>
+            Add new list item to selected list(Case sensitive)
+            </summary>
+            <param name="ListTitle"></param>
+            <param name="ItemTitle"></param>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListItemController.Put(System.String,System.String)">
+            <summary>
+            Set list item as completed(Case sensitive)
+            </summary>
+            <param name="ItemTitle"></param>
+            <param name="ListTitle"></param>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListItemController.Delete(System.String,System.String)">
+            <summary>
+            Delete list item from the list(Case sensitive)
+            </summary>
+            <param name="ListTitle"></param>
+            <param name="ItemTitle"></param>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListsController.#ctor(VTS_TODO_API.Services.ITODOListService)">
+            <summary>
+            
+            </summary>
+            <param name="TODOList"></param>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListsController.Get">
+            <summary>
+            Get all TODO lists(Case sensitive)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListsController.Get(System.String)">
+            <summary>
+            Get TODO lists by owner name(Case sensitive) 
+            </summary>
+            <param name="UserName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListsController.Post(System.String,System.String)">
+            <summary>
+            Creates new TODO list. ListTitle MUST BE UNIQUE! Consider ListTitle as the Primary Key for demo simplicity. Oly 1 list with the same ListTitle can exists in the memory store. (Case sensitive)
+            </summary>
+            <param name="ListTitle"></param>
+            <param name="UserName">list owner</param>
+        </member>
+        <member name="M:VTS_TODO_API.Controllers.TODOListsController.Delete(System.String)">
+            <summary>
+            Remove TODO List with  title(Case sensitive)
+            </summary>
+            <param name="ListTitle"></param>
+        </member>
+        <member name="T:VTS_TODO_API.Implementation.TODOListItemService">
+            <summary>
+            Keeps connection to in memory Data Store
+            </summary>
+        </member>
+        <member name="T:VTS_TODO_API.Implementation.TODOListService">
+            <summary>
+            Keeps connection to in memory Data Store
+            </summary>
+        </member>
+    </members>
+</doc>
